@@ -22,6 +22,7 @@ public class Customer {
 	int age;
 	String mail;
 	String city;
+	String state;
 	long phone_Number;
 
 }
