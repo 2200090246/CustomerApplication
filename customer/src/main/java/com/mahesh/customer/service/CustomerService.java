@@ -4,7 +4,7 @@ import java.util.List;
 
 
 import com.mahesh.customer.model.Customer;
-
+//this is repo
 public interface CustomerService {
 	//insert Customerdata into database
 	Customer createCustomer(Customer c);
