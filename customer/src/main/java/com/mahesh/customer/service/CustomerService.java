@@ -13,9 +13,7 @@ public interface CustomerService {
 	//get only one customerdata using id
 	Customer getCustomer(int id);
 	//update all customers
-	Customer updateAllCustomers();
-	//update one customer using id
-	Customer updateCustomer(int id);
+	Customer updateData(Customer c);
 	//delete customer using id
 	void deleteCustomer(int id);
 }
