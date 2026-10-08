@@ -3,6 +3,7 @@ package com.mahesh.customer.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,20 +22,28 @@ public class CustomerController {
 	CustomerService customer;
 
 	@PostMapping("/insert")
-	Customer CreateCustomerInfo( @RequestBody Customer c) {
+	Customer CreateCustomerInfo(@RequestBody Customer c) {
 		return customer.createCustomer(c);
 	}
+
 	@GetMapping("/getall")
-	List<Customer> getAllCustomers(){
+	List<Customer> getAllCustomers() {
 		return customer.getAllCustomers();
 	}
+
 	@GetMapping("/getbyid/{id}")
 	Customer getCustomerById(@PathVariable int id) {
 		return customer.getCustomer(id);
 	}
+
 	@PutMapping("/updatedata")
 	Customer updateCustomer(@RequestBody Customer c) {
 		return customer.updateData(c);
+	}
+
+	@DeleteMapping("/deletedata")
+	void deleteCustomerById(@PathVariable int id) {
+		customer.deleteCustomer(id);
 	}
 
 }
