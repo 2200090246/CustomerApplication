@@ -33,7 +33,7 @@ public class CustomerServiceeImpl implements CustomerService{
 	@Override
 	public Customer updateData(Customer c) {
 		// TODO Auto-generated method stub
-		return null;
+		return customer.save(c);
 	}
 
 	@Override
