@@ -24,5 +24,7 @@ public class Customer {
 	String city;
 	String state;
 	long phone_Number;
+	
+	
 
 }
