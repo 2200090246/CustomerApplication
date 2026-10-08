@@ -9,9 +9,10 @@ import com.mahesh.customer.model.Customer;
 import com.mahesh.customer.repo.CustomerRepo;
 
 @Service
-public class CustomerServiceeImpl implements CustomerService{
+public class CustomerServiceeImpl implements CustomerService {
 	@Autowired
 	CustomerRepo customer;
+
 	@Override
 	public Customer createCustomer(Customer c) {
 		// TODO Auto-generated method stub
@@ -39,7 +40,8 @@ public class CustomerServiceeImpl implements CustomerService{
 	@Override
 	public void deleteCustomer(int id) {
 		// TODO Auto-generated method stub
-		
+		customer.deleteById(id);
+
 	}
 
 }
