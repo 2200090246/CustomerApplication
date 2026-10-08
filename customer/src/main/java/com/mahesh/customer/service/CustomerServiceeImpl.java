@@ -27,7 +27,7 @@ public class CustomerServiceeImpl implements CustomerService{
 	@Override
 	public Customer getCustomer(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		return customer.findById(id).orElse(null);
 	}
 
 	@Override
