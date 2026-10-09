@@ -32,9 +32,17 @@ public class CustomerServiceeImpl implements CustomerService {
 	}
 
 	@Override
-	public Customer updateData(Customer c) {
+	public Customer updateData(Customer c,int id) {
 		// TODO Auto-generated method stub
-		return customer.save(c);
+		Customer c1 = getCustomer(id);
+		c1.setAge(c.getAge());
+		c1.setCity(c.getCity());
+		c1.setMail(c.getMail());
+		c1.setName(c.getName());
+		c1.setPhone_Number(c.getPhone_Number());
+		c1.setState(c.getState());
+		
+		return customer.save(c1);
 	}
 
 	@Override
