@@ -36,9 +36,9 @@ public class CustomerController {
 		return customer.getCustomer(id);
 	}
 
-	@PutMapping("/updatedata")
-	Customer updateCustomer(@RequestBody Customer c) {
-		return customer.updateData(c);
+	@PutMapping("/updatedata/{id}")
+	Customer updateCustomer(@RequestBody Customer c,@PathVariable int id) {
+		return customer.updateData(c,id);
 	}
 
 	@DeleteMapping("/deletedata/{id}")
