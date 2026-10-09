@@ -42,8 +42,9 @@ public class CustomerController {
 	}
 
 	@DeleteMapping("/deletedata/{id}")
-	void deleteCustomerById(@PathVariable int id) {
+	String deleteCustomerById(@PathVariable int id) {
 		customer.deleteCustomer(id);
+		return "Customer"+id+ "deleted successfully";
 	}
 
 }
